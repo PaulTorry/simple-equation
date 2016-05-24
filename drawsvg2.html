@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script>
+    function hello(){
+      console.log("hi");
+      document.addEventListener("mousemove", function(e) {
+        document.getElementsByTagName("svg")[0].innerHTML= '<text fill="black" x="' + e.pageX + '" y="' + e.pageY + '">20</text>';
+        console.log("hi");
+      });
+    }
+
+    </script>
+<style>
+#e1_line{stroke: red;}
+svg{preserveAspectRatio: "xMidYMid meet";}
+svg>line{stroke-width: 1px; stroke: black;}
+svg>text{
+  fill: "black";
+  font-family: Arial;
+  font-size: 20px;
+  }
+</style>
+</head>
+<body>
+  <h1 onclick= "hello()"> Hello </h1>
+
+<svg width="980px" height="800px" viewBox="0 0  980 800" >
+  <line x1="80" y1="119" x2="80" y2="449"/>
+  <line x1="77" y1="449" x2="712" y2="448"/>
+  <line x1="94" y1="343" x2="675" y2="152" />
+  <text fill="black" x="296" y="357">20</text>
+</svg>
+</body>
